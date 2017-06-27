@@ -1,0 +1,7 @@
+package enums;
+
+public enum Verb {
+
+	NOTHING, UNKNOWN, MOUSEX, MOUSEY, MOUSECLICK, MOUSEALTCLICK, WAIT, STOP, KEYPRESS
+			
+}
