@@ -81,4 +81,8 @@ public class Action implements IAction {
 	public int GetValue() {
 		return value;
 	}
+	
+	public void ToString() {
+		System.out.println(String.format("Verb: %s\nValue: %s", GetVerb(), GetValue()));
+	}
 }

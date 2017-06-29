@@ -8,4 +8,5 @@ public interface IAction {
 	Pair<Verb, Integer> Parse(String message);
 	public int GetValue();
 	public Verb GetVerb();
+	void ToString();
 }
