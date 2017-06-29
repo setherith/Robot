@@ -1,16 +1,19 @@
 package main;
 
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JMenuBar;
+import javax.swing.JList;
 import javax.swing.JMenu;
+import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
-import javax.swing.JList;
-import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+
+import automate.Automate;
+import models.Action;
 
 public class Interface {
 
@@ -85,6 +88,13 @@ public class Interface {
 		frmRobotV.getContentPane().add(list);
 		
 		JButton btnRecord = new JButton("Record");
+		btnRecord.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("Capturing mouse...");
+				Action result = new Automate().Record();
+				result.ToString();
+			}
+		});
 		btnRecord.setBounds(6, 136, 117, 29);
 		frmRobotV.getContentPane().add(btnRecord);
 		

@@ -1,6 +1,8 @@
 package automate;
 
 import java.awt.AWTException;
+import java.awt.MouseInfo;
+import java.awt.Point;
 import java.awt.Robot;
 
 import interfaces.IAutomate;
@@ -23,7 +25,14 @@ public class Automate implements IAutomate {
 	@Override
 	public Action Record() {
 		// TODO Auto-generated method stub
-		return null;
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		Point mouse = MouseInfo.getPointerInfo().getLocation();
+		Action result = new Action("MX" + String.valueOf(mouse.getX()));
+		return result;
 	}
 	
 }
