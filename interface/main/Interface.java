@@ -37,13 +37,14 @@ public class Interface {
 	}
 
 	/**
-	 * Initialize the contents of the frame.
+	 * Initialise the contents of the frame.
 	 */
 	private void initialize() {
 		frmRobotV = new JFrame();
 		frmRobotV.setTitle("Robot v1.0");
 		frmRobotV.setResizable(false);
 		frmRobotV.setBounds(100, 100, 450, 213);
+		frmRobotV.setLocationRelativeTo(null);
 		frmRobotV.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		JMenuBar menuBar = new JMenuBar();
